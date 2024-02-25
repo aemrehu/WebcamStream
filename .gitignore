@@ -160,4 +160,4 @@ cython_debug/
 #.idea/
 
 # Secrets
-secrets.txt
+secret-key.txt
