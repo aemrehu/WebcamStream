@@ -161,3 +161,4 @@ cython_debug/
 
 # Secrets
 secret-key.txt
+allowed-host.txt

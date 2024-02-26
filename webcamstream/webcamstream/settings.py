@@ -25,7 +25,7 @@ SECRET_KEY = open(Path("webcamstream\secret-key.txt"),'r').read().strip()
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['192.168.68.130', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = [open(Path("webcamstream\\allowed-host.txt"),'r').read().strip(), 'localhost', '127.0.0.1']
 
 
 # Application definition
