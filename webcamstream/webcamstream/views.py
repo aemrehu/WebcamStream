@@ -9,7 +9,9 @@ from django.http import StreamingHttpResponse
 
 class VideoCamera(object):
     def __init__(self):
-        self.video = cv2.VideoCapture(0)
+        self.video = cv2.VideoCapture(0, cv2.CAP_DSHOW)
+        self.video.set(cv2.CAP_PROP_FRAME_WIDTH, 1920)
+        self.video.set(cv2.CAP_PROP_FRAME_HEIGHT, 1080)
         (self.grabbed, self.frame) = self.video.read()
         threading.Thread(target=self.update, args=()).start()
 
